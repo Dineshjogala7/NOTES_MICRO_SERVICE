@@ -1,0 +1,50 @@
+
+services:
+  api-gateway:
+    build: ./Server/api-gateway
+    ports:
+      - "5003:5003"
+    env_file:
+      - ./Server/api-gateway/.env
+    depends_on:
+      - redis
+      - mongodb
+  
+  category-service:
+    build: ./Server/category-service
+    ports:
+      - "5002:5002"
+    env_file:
+      - ./Server/category-service/.env
+    depends_on:
+      - redis
+      - mongodb
+  
+  notes-service:
+    build: ./Server/notes-service
+    ports:
+      - "5001:5001"
+    env_file:
+      - ./Server/notes-service/.env
+    depends_on:
+      - redis
+      - mongodb
+  
+  user-service:
+    build: ./Server/user-service
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./Server/user-service/.env
+    depends_on:
+      - redis
+      - mongodb
+  redis:
+    image : redis
+    ports:
+      - "6379:6379"
+  
+  mongodb:
+    image : mongo
+    ports:
+      - "27017-27017"
