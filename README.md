@@ -6,7 +6,7 @@ A production-ready microservices backend for a Notes application built with **No
 
 ## Architecture
 
-![Architecture Diagram](./docs/architecture.png)
+Screenshot 2026-03-01 224504.png
 
 > **Client → API Gateway → Internal Services**
 > Services communicate via **HTTP** (sync) and **Redis Pub/Sub** (async events).
