@@ -7,4 +7,4 @@ RUN npm install
 COPY . .
 EXPOSE 5003
 
-CMD ["node" , "index.js"]
+CMD ["npx","nodemon","index.js"]

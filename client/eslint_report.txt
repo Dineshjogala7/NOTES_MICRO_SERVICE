@@ -1,0 +1,118 @@
+[0m[0m
+[0m[4mC:\back+front\Micro-Services\Notes-Micro-Service\client\Auth\Login.jsx[24m[0m
+[0m  [2m10:22[22m  [31merror[39m  'setLoading' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  [2mno-unused-vars[22m[0m
+[0m[0m
+[0m[4mC:\back+front\Micro-Services\Notes-Micro-Service\client\Modals\AddCategoryModel.jsx[24m[0m
+[0m   [2m2:46[22m  [31merror[39m  'useState' is not defined                                                                [2mno-undef[22m[0m
+[0m   [2m3:12[22m  [31merror[39m  'loading' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  [2mno-unused-vars[22m[0m
+[0m   [2m3:36[22m  [31merror[39m  'useState' is not defined                                                                [2mno-undef[22m[0m
+[0m   [2m7:36[22m  [31merror[39m  'axios' is not defined                                                                   [2mno-undef[22m[0m
+[0m  [2m11:13[22m  [31merror[39m  'toast' is not defined                                                                   [2mno-undef[22m[0m
+[0m  [2m14:13[22m  [31merror[39m  'toast' is not defined                                                                   [2mno-undef[22m[0m
+[0m[0m
+[0m[4mC:\back+front\Micro-Services\Notes-Micro-Service\client\Modals\UpdateCategoryModel.jsx[24m[0m
+[0m   [2m2:46[22m  [31merror[39m  'useState' is not defined                                                                   [2mno-undef[22m[0m
+[0m   [2m3:12[22m  [31merror[39m  'loading' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u     [2mno-unused-vars[22m[0m
+[0m   [2m3:22[22m  [31merror[39m  'setLoading' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  [2mno-unused-vars[22m[0m
+[0m   [2m3:36[22m  [31merror[39m  'useState' is not defined                                                                   [2mno-undef[22m[0m
+[0m   [2m6:36[22m  [31merror[39m  'axios' is not defined                                                                      [2mno-undef[22m[0m
+[0m  [2m10:13[22m  [31merror[39m  'toast' is not defined                                                                      [2mno-undef[22m[0m
+[0m  [2m13:13[22m  [31merror[39m  'toast' is not defined                                                                      [2mno-undef[22m[0m
+[0m[0m
+[0m[4mC:\back+front\Micro-Services\Notes-Micro-Service\client\src\App.jsx[24m[0m
+[0m  [2m24:37[22m  [31merror[39m  Error: Cannot create components during render[0m
+[0m[0m
+[0mComponents created during render will reset their state each time they are created. Declare components outside of render.[0m
+[0m[0m
+[0m  22 |      [0m
+[0m  23 |       <Routes>[0m
+[0m> 24 |         <Route path="/" element = {<ProtectedRoute><Home/></ProtectedRoute>}/>[0m
+[0m     |                                     ^^^^^^^^^^^^^^ This component is created during render[0m
+[0m  25 |         <Route path="/login" element = {<Login/>}/>[0m
+[0m  26 |         <Route path="/register" element= {<Register/>}/>[0m
+[0m  27 |         <Route path="/category/:categoryId" element = {<ProtectedRoute><Category/></ProtectedRoute>}/>[0m
+[0m[0m
+[0m   6 | import { Toaster } from "react-hot-toast";[0m
+[0m   7 | const App = () => {[0m
+[0m>  8 |   const ProtectedRoute = ({children})=>{[0m
+[0m     |                          ^^^^^^^^^^^^^^^[0m
+[0m>  9 |     const getCookie = (cookieName) =>{[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 10 |       const match = document.cookie.split('; ').find(row =>row.startsWith(cookieName));[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 11 |       return match ? match.split('=')[1] : null;[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 12 |     };[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 13 |     const token = getCookie(import.meta.env.VITE_COOKIE_NAME);[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 14 |     if(!token) return <Navigate to = "/register" replace/>[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 15 |     return children[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 16 |[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 17 |   }[0m
+[0m     | ^^^^ The component is created during render here[0m
+[0m  18 |   return ([0m
+[0m  19 |     <div className="min-h-screen bg-yellow-200 flex items-center justify-center">[0m
+[0m  20 |       <Toaster position="top-center"/>  [2mreact-hooks/static-components[22m[0m
+[0m  [2m27:57[22m  [31merror[39m  Error: Cannot create components during render[0m
+[0m[0m
+[0mComponents created during render will reset their state each time they are created. Declare components outside of render.[0m
+[0m[0m
+[0m  25 |         <Route path="/login" element = {<Login/>}/>[0m
+[0m  26 |         <Route path="/register" element= {<Register/>}/>[0m
+[0m> 27 |         <Route path="/category/:categoryId" element = {<ProtectedRoute><Category/></ProtectedRoute>}/>[0m
+[0m     |                                                         ^^^^^^^^^^^^^^ This component is created during render[0m
+[0m  28 |       </Routes>[0m
+[0m  29 |     </div>  [0m
+[0m  30 |   );[0m
+[0m[0m
+[0m   6 | import { Toaster } from "react-hot-toast";[0m
+[0m   7 | const App = () => {[0m
+[0m>  8 |   const ProtectedRoute = ({children})=>{[0m
+[0m     |                          ^^^^^^^^^^^^^^^[0m
+[0m>  9 |     const getCookie = (cookieName) =>{[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 10 |       const match = document.cookie.split('; ').find(row =>row.startsWith(cookieName));[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 11 |       return match ? match.split('=')[1] : null;[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 12 |     };[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 13 |     const token = getCookie(import.meta.env.VITE_COOKIE_NAME);[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 14 |     if(!token) return <Navigate to = "/register" replace/>[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 15 |     return children[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 16 |[0m
+[0m     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m> 17 |   }[0m
+[0m     | ^^^^ The component is created during render here[0m
+[0m  18 |   return ([0m
+[0m  19 |     <div className="min-h-screen bg-yellow-200 flex items-center justify-center">[0m
+[0m  20 |       <Toaster position="top-center"/>                                                [2mreact-hooks/static-components[22m[0m
+[0m[0m
+[0m[4mC:\back+front\Micro-Services\Notes-Micro-Service\client\src\Category.jsx[24m[0m
+[0m   [2m6:32[22m   [31merror[39m    'useState' is not defined                                                                                      [2mno-undef[22m[0m
+[0m   [2m7:36[22m   [31merror[39m    'useState' is not defined                                                                                      [2mno-undef[22m[0m
+[0m  [2m12:40[22m   [31merror[39m    'axios' is not defined                                                                                         [2mno-undef[22m[0m
+[0m  [2m18:17[22m   [31merror[39m    'toast' is not defined                                                                                         [2mno-undef[22m[0m
+[0m  [2m23:7[22m    [33mwarning[39m  React Hook useEffect has a missing dependency: 'categoryId'. Either include it or remove the dependency array  [2mreact-hooks/exhaustive-deps[22m[0m
+[0m  [2m38:105[22m  [31merror[39m    'handleDelete' is not defined                                                                                  [2mno-undef[22m[0m
+[0m  [2m39:107[22m  [31merror[39m    'handleUpdate' is not defined                                                                                  [2mno-undef[22m[0m
+[0m[0m
+[0m[4mC:\back+front\Micro-Services\Notes-Micro-Service\client\src\Home.jsx[24m[0m
+[0m  [2m55:9[22m  [31merror[39m  'navigate' is not defined  [2mno-undef[22m[0m
+[0m[0m
+[0m[4mC:\back+front\Micro-Services\Notes-Micro-Service\client\src\Notes.jsx[24m[0m
+[0m   [2m9:40[22m  [31merror[39m    'axios' is not defined                                                                                     [2mno-undef[22m[0m
+[0m  [2m15:17[22m  [31merror[39m    'toast' is not defined                                                                                     [2mno-undef[22m[0m
+[0m  [2m20:7[22m   [33mwarning[39m  React Hook useEffect has a missing dependency: 'noteId'. Either include it or remove the dependency array  [2mreact-hooks/exhaustive-deps[22m[0m
+[0m  [2m26:36[22m  [31merror[39m    'axios' is not defined                                                                                     [2mno-undef[22m[0m
+[0m  [2m33:13[22m  [31merror[39m    'toast' is not defined                                                                                     [2mno-undef[22m[0m
+[0m[0m
+[0m[31m[1m✖ 29 problems (27 errors, 2 warnings)[22m[39m[0m
+[0m[31m[1m[22m[39m[0m
